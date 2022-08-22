@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    /* classes desendent */ 
+    /* div>div{
+      color:blue;
+    } */
+    /* div>div>div{
+         color:blue;
+    } */
+    /* div div{
+      color:blue;
+    } */
+    /* div>span{
+         color:blue;
+    }  */
+       
+    /* .c1{
+      color:blue;
+    } */
+    /* div>div{
+      color:blue;
+    } */
+
+  /*.c1.c2 means(and) multiple select(jab ek class me do class name tab ese select karte hai select karne ke liye)*/
+    /*.c1,.c2 means(or) grouping(alag-2 classes id ya tag ho comma ,lga ke seprate kar dete hai aur ek hi bar me use kar lete hai )*/
+    /*.c1 .c2 means(space) decendant  */
+
+    /* .c1 .c2{
+      color:blue;
+    } */
+    /* div>div>span{
+      color:blue;
+    } */
+    /* div .c2{
+        color:blue;
+    }  */
+
+  </style>
+</head>
+
+<body>
+  <!-- Select "I'm here. find me" and make it blue  -->
+
+  <div class="c1">
+    <div>
+      <div>
+        <span>
+          <div class="c2">I'm here. find me</div>
+        </span>
+      </div>
+    </div>
+
+  </div>
+
+    <span>
+      <div class="c2">Dont select me</div>
+    </span>
+</body>
+
+</html>

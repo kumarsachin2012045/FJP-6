@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* universal selector */
+
+           /* *{
+               
+               background-color:aquamarine;
+           } */
+           /* div ye applay hoga jaha-2 div hoga*/
+           /* div{
+               color:brown;
+           } */
+        /* class selector jisme class ka name hoga usi me use hoga*/
+        .container{
+            color:brown;
+        }
+        .container2{
+            font-size: x-large;
+        }
+        /* id selector */
+         /* .one{
+            background-color:aqua;
+            color:red;
+            font-size:x-large;
+        }
+        .two{
+            background-color:aqua;
+            color:red;
+            font-size:x-large;
+        }
+        .three{
+            background-color:aqua;
+            color:red;
+            font-size:x-large;
+        } */
+        /* grouping se ye uppar ke jitne bhi class id bnaye ho sabko ek hi bar me kar sakte ho */
+        /* yhi property sabhi(class ,id,tag) par apply hoga */
+        .one,.two,.three,div{
+            background-color:aqua;
+            color:red;
+            font-size:x-large;
+        }
+        /* select tag with multiple classes */
+        .container.container2{
+            background-color:burlywood;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Heading</h1>
+    <p id="one">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est corrupti delectus possimus et blanditiis veniam molestias dolore illum maxime. Ratione suscipit officia reprehenderit. Cupiditate dolorum laborum doloremque nihil voluptatum debitis.
+    <div class="container">
+        <h1>heading inside</h1>
+        <p>para inside div</p>
+    </div>
+    <div>
+        <h1>heading inside</h1>
+        <p>para inside div</p>
+
+    </div>
+    <h3>heading 3</h3>
+    <a class="container" href="">Link to nothing</a>
+    <h3>heading 6</h3>
+    <p class="container2">class container2 applied on me</p>
+    <p class="container container2">I have both class continer and container2</p>
+    <h1>Grouping</h1>
+    <a  class="one"href="">link class one1</a>
+    <h5 class="two">heading class two2</h5>
+    <p  class="three">paragraph class3</p>
+</body>
+</html>
+    <!-- * ye hai universal selector iski properties sabhi tag par apply hoti hai(poore page par) -->
+    <!-- jo bhi tag ke bagal me hota hai use attribute kahte hai like src,alt,herf..-->
+   <!-- class ek attribute h ye HTML tag par apply hota hai  -->
+    <!-- class tag ko diffrentiate karne ke liye use karte hai taki ek jaise sbhi tag par property apply na ho
+    ye kaise  karte hai? selector se dot lga ke-->
+    <!-- we can be apply more than 1 tag -->
+    <!-- id HTML tag par apply hota h -->
+    <!-- id ek attribute hai unique hoti hai  -->
+    <!-- ye bhi diffrentiate karne ke liye hota h-->
+    <!-- we can apply more than one classes on 1 tag -->
+    
