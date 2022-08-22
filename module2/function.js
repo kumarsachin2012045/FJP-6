@@ -22,4 +22,12 @@ let val=function sub(n1,n2){
 }
 console.log("subtraction is "+val(11,2));
 
-IIFE 
+//IIFE immediatly invoked expression
+//IIFE without parameter
+(function(){
+    console.log("hello from IIFE");
+})();
+//IIFE with parameter
+(function(n1,n2){
+    console.log(n1/n2);
+})(4,2);
