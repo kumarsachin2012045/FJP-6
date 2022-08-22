@@ -34,3 +34,4 @@ if(k==0)
   console.log("number is not prime");
 else
   console.log("number is not prime");
+  
