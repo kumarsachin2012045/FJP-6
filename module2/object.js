@@ -42,3 +42,15 @@ console.log(capAmerica.sayHi());//it give o/p capAmerica say hi with undefind
 //ise remove karne karne ke liye console.log hatana padega 
 capAmerica.sayHi();//function call
 
+//update key 
+console.log("object before updation :",capAmerica);
+//add a new key
+capAmerica.Movies=['avengers','endgame'];
+console.log("object after update :",capAmerica);
+//deletion
+delete capAmerica.Movies;
+console.log("object after delete : ",capAmerica);
+//accessing key by other method
+console.log(capAmerica.name);//name by default act as a string
+console.log(capAmerica["name"]);//in form of string
+//console.log(capAmerica[name]);//name search as a variable 
