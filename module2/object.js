@@ -54,3 +54,4 @@ console.log("object after delete : ",capAmerica);
 console.log(capAmerica.name);//name by default act as a string
 console.log(capAmerica["name"]);//in form of string
 //console.log(capAmerica[name]);//name search as a variable 
+console.log(capAmerica["address"]["city"]);
