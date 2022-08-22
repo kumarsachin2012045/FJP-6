@@ -23,3 +23,22 @@ let capAmerica={
     }
 }
 console.log(capAmerica);
+//accessing key
+console.log(capAmerica.name);
+console.log(capAmerica.age);
+console.log(capAmerica.address);
+console.log(capAmerica.friends);
+console.log(capAmerica.sayHi);
+//accesing array element
+console.log(capAmerica.friends[0]);
+console.log(capAmerica.friends[1]);
+//acessing object key value
+console.log(capAmerica.address.city);
+console.log(capAmerica.address.state);
+//accessing function
+console.log(capAmerica.sayHi);
+console.log(capAmerica.sayHi());//it give o/p capAmerica say hi with undefind
+//kyo ki sayHi function kuchh return nhi kar raha hai isliye console.log me rakhne par undefined aayega
+//ise remove karne karne ke liye console.log hatana padega 
+capAmerica.sayHi();//function call
+
