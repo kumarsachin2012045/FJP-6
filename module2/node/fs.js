@@ -41,4 +41,5 @@ console.log(""+content3);
 
 //D- delete//isme file ka path de do bas us file ko hta dega
 
-//fs.unlinkSync(filePath);
+fs.unlinkSync(filePath);
+//delete wale ko comment karke dekho ge to file dikh jayega jo create hua tha
