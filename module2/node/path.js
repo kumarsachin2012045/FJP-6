@@ -8,7 +8,7 @@ console.log(__filename);//file tak ka path dega with name
 let baseNmae=path.basename(__filename);
 console.log(baseNmae);
 
-//let se tumhe do path ko join karna ho to
+//let se tumhe do path ko join karke nye 
  let dirPath=__dirname;//ye jis file me ho uska path dega
  console.log(dirPath);
  console.log("***************************************************");
