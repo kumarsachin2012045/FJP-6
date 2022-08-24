@@ -74,3 +74,5 @@ let destinationPath=path.join(__dirname,"module","forcopy.js")//module same fold
 console.log(destinationPath);   
 //do path taiyar hai copy karo
 fs.copyFileSync(sourcepath,destinationPath);
+console.log("ho gya copy path");
+
