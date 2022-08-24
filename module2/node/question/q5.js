@@ -1,12 +1,11 @@
 //move a file
-let fs=require("fs");
-let path=require("path");
+let path=require('path');
+let fs=require('fs');
+let srcpath=path.join(__dirname,"File.txt");
+console.log(srcpath);
+let destpath=path.join(__dirname,"Newfolder","File.txt");
 
-let srcPath=path.join(__dirname,"file1.txt");
-//console.log(srcPath);
-let destPath=path.join(__dirname,"newFolder","file1.txt");
+fs.copyFileSync(srcpath,destpath);
 
-//move karne ke liye pahle copy kar do destination par phir source se hta dena
-fs.copyFileSync(srcPath,destPath);
-
-fs.unlinkSync(srcPath);
+//hame move karna tha isliye jo source the use unlink kar dete hai jisse o hat jayega jaha tha wha se
+fs.unlinkSync(srcpath);
