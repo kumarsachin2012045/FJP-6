@@ -61,3 +61,16 @@ console.log(contentOfFolder);//read karke array me dega sare file ka
 //JAB COPY PATH KARKE folderPath ME Rakhoge single slace se seprated hoga  to run karoge to error dega
 //error na aye isliye double slace (\\) se replace kar dena
 
+
+// D-Delete how to delete/remove a directory search kar lo google se kuch yad nhi karna hai
+fs.rmdirSync("Hamaridirectory");//rmdirSync me name do folder ka ya path use delete kar dega
+//ye kewal empty folder delete karega // to ab google kro jab folder me file ho to kaise delete kare
+
+//C-Copy how to copy
+let sourcepath=path.join(__dirname,"forcopy.js");//__dirname bta raha hai durectory ki path jisme ho
+console.log(sourcepath);
+let destinationPath=path.join(__dirname,"module","forcopy.js")//module same folder me hai uske age module + focopy add kar do path me 
+//jis jagah jana hai o socho kaisa dikhega destinamtion path ose bna do __dirname ke add karke
+console.log(destinationPath);   
+//do path taiyar hai copy karo
+fs.copyFileSync(sourcepath,destinationPath);
