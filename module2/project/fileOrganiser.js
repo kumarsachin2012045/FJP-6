@@ -1,7 +1,7 @@
 //task 1 take input and assumption koi folder nhi hona chahiye folder ke andar
 let folderPath=process.argv[2];
 //console.log(folderPath);
-//task 2 read the folder
+//task 2 read the folder//first check folder exists or not
 let fs=require('fs');
 let folderExists=fs.existsSync(folderPath);
 
