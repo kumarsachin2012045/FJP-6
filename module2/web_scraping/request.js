@@ -26,11 +26,13 @@
 
 
     // // ya ese likho
-    // const request=require('request');
-    // request('http://www.google.com',cb);//http://www.google.com ye request complete hone ke bad cb call hota hai
-    // function cb(error,response,body){
-    //     if(error)
-    //     console.error('error',error);// Print the error if one occurred
-    //     else
-    //       console.log('body',body);// Print the HTML for the Google homepage.
-    // }
+    const request=require('request');
+    request('http://www.google.com',cb);//http://www.google.com ye request complete hone ke bad cb call hota hai
+    function cb(error,response,body){
+        if(error)
+        console.error('error',error);// Print the error if one occurred
+        else
+          console.log('body',body);// Print the HTML for the Google homepage.
+    }
+
+    //ye apna request(browser)-response(server) cycle chalti rahti h

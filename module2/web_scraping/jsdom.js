@@ -8,7 +8,8 @@
 //agar apko poora element nhi chahiye to .textContent likh dena ye jo text likha hoga wo lake de dega
 
 
-const jsdom = require("jsdom");
-const { JSDOM } = jsdom;
-const dom = new JSDOM(`<!DOCTYPE html><p>Hello world</p>`);
-console.log(dom.window.document.querySelector("p").textContent);
+const jsdom = require("jsdom");//ye jo require kiya ye object hai isme different-2 key hongi
+const { JSDOM } = jsdom;//ye dusra tareeka hai direct object se key nikalne ka
+const dom = new JSDOM(`<!DOCTYPE html><p>Hello world</p>`);//isme html pass karte hai
+console.log(dom.window.document.querySelector("p").textContent);//isme selector pass karte hai
+//ab request and jsdom ko combine karke use karte hai activity.js me
