@@ -9,10 +9,28 @@
 //   console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
 //   console.log('body:', body); // Print the HTML for the Google homepage.
 // });ise ham anpi need ke according use karenge error body and status
-const request=require('request');
-request('http://www.google.com', function (error, response, body) {
- if(error)
-  console.error('error:', error); // Print the error if one occurred
-  else
-  console.log('body:', body); // Print the HTML for the Google homepage.
-});
+
+
+
+
+// const request=require('request');
+// request('http://www.google.com', function (error, response, body) {
+//  if(error)
+//   console.error('error:', error); // Print the error if one occurred
+//   else
+//   console.log('body:', body); // Print the HTML for the Google homepage.
+// });
+
+
+
+
+
+    // // ya ese likho
+    // const request=require('request');
+    // request('http://www.google.com',cb);//http://www.google.com ye request complete hone ke bad cb call hota hai
+    // function cb(error,response,body){
+    //     if(error)
+    //     console.error('error',error);// Print the error if one occurred
+    //     else
+    //       console.log('body',body);// Print the HTML for the Google homepage.
+    // }

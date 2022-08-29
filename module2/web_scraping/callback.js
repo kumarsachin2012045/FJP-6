@@ -5,8 +5,9 @@ console.log(content+"");
 console.log("After reading the data");
 // ye kam sychronously ho raha hai line by line
 //ham chahte hai jab tak data read kare tab tak uske neeche ka code chal jaye ie asychronously ye ham karte hai callback function se 
-fs.readFile("file.txt",cb);//yaha cb name ka callback function use kiya
+
 console.log("*****************************************");
+fs.readFile("file.txt",cb);//yaha cb name ka callback function use kiya
 console.log("Before reading the data");
 function cb(error,data){
     console.log(data+"");
