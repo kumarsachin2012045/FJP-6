@@ -13,7 +13,9 @@ function cb(error, response, html) {
         console.log(html);
         const dom = new JSDOM(html);
         const document = dom.window.document;
-        let temp= document.querySelectorAll(".ds-text-tight-m.ds-font-regular.ds-truncate.ds-text-typo-title");
+        // let temp= document.querySelectorAll(".ds-text-tight-m.ds-font-regular.ds-truncate.ds-text-typo-title");
+        //let temp= document.querySelectorAll(".ds-text-tight-m.ds-font-regular.ds-text-ui-typo-mid");
+        let temp= document.querySelectorAll(".ds-text-tight-s.ds-font-bold.ds-uppercase");
            for(let i=0;i<temp.length;i++)
            console.log(temp[i].textContent);
         }
