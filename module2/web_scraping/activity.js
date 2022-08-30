@@ -2,7 +2,7 @@ const request = require('request');
 const jsdom = require("jsdom");
 const { JSDOM } = jsdom;
 
-const link = "https://www.google.com/";
+const link = "https://www.espncricinfo.com/series/ipl-2021-1249214/royal-challengers-bangalore-vs-kolkata-knight-riders-eliminator-1254115/full-scorecard";
 
 request(link, cb);
 
@@ -13,8 +13,8 @@ function cb(error, response, html) {
         console.log(html);
         const dom = new JSDOM(html);
         const document = dom.window.document;
-        let temp= document.querySelectorAll("#SIvCob");
-        
-           console.log(temp[0].textContent);
+        let temp= document.querySelectorAll(".ds-text-tight-m.ds-font-regular.ds-truncate.ds-text-typo-title");
+           for(let i=0;i<temp.length;i++)
+           console.log(temp[i].textContent);
         }
     }
