@@ -14,10 +14,13 @@ function cb(error, response, html) {
         const document = dom.window.document;
         let bolwerTable= document.querySelectorAll(".ci-scorecard-table+.ds-w-full.ds-table.ds-table-md.ds-table-auto");
         //console.log(bolwerTable.length);
+        let Hwckt=0;
+        let HwcktTaker=" ";
         for(let i=0;i<bolwerTable.length;i++)
         {
             let rows=bolwerTable[i].querySelectorAll("tbody tr");
             //console.log(rows.length);//ye number of rows bta raha dono table me
+           
             for(let j=0;j<rows.length;j++)//loop lgaya td par har row ek se jyada td hai
             {
              let tds=rows[j].querySelectorAll("td");
@@ -25,9 +28,17 @@ function cb(error, response, html) {
              {
                 let name=tds[0].textContent;
                 let wickets=tds[4].textContent;
-                console.log("Name of Bolwer --------------> "+name+"                        Wicket ---->",wickets);
+                //console.log("Name of Bolwer -----> "+name+" Wicket ---->",wickets);
+                if( Hwckt<wickets){
+                    Hwckt=wickets;
+                    HwcktTaker=name;
+                }
              }
+
             } 
-        }        
+            
+        }   
+        console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+            console.log("Higest wicket taken by "+HwcktTaker+" wicket "+Hwckt);     
     }
 }
