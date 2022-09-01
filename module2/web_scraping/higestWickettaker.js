@@ -39,6 +39,7 @@ function cb(error, response, html) {
             
         }   
         console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
-            console.log("Higest wicket taken by "+HwcktTaker+" wicket "+Hwckt);     
+            console.log("Higest wicket taken by "+HwcktTaker);    
+            console.log("Higest wicket is ",Hwckt); 
     }
 }
