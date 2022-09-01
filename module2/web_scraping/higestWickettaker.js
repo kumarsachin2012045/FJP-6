@@ -2,7 +2,8 @@ const request = require('request');
 const jsdom = require("jsdom");
 const { JSDOM } = jsdom;
 
-const link = "https://www.espncricinfo.com/series/ipl-2021-1249214/royal-challengers-bangalore-vs-kolkata-knight-riders-eliminator-1254115/full-scorecard";
+// const link = "https://www.espncricinfo.com/series/ipl-2021-1249214/royal-challengers-bangalore-vs-kolkata-knight-riders-eliminator-1254115/full-scorecard";
+const link = "https://www.espncricinfo.com/series/the-hundred-men-s-competition-2022-1299141/manchester-originals-men-vs-oval-invincibles-men-32nd-match-1299202/full-scorecard";//ye maine dusre match ka link dal ke dekha sabhi match ke liye chalta hai
 
 request(link, cb);
 
@@ -12,7 +13,7 @@ function cb(error, response, html) {
     else{
         const dom = new JSDOM(html);
         const document = dom.window.document;
-        let bolwerTable= document.querySelectorAll(".ci-scorecard-table+.ds-w-full.ds-table.ds-table-md.ds-table-auto");
+        let bolwerTable= document.querySelectorAll(".ci-scorecard-table+.ds-w-full.ds-table.ds-table-md.ds-table-auto");//whole html page se bolwer table nikala
         //console.log(bolwerTable.length);
         let Hwckt=0;
         let HwcktTaker=" ";

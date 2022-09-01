@@ -25,8 +25,7 @@ function cb(error, response, html) {
        console.log("............................................................................................")
         for(let i=0;i<temp.length;i++)
           console.log(temp[i].textContent);
-          
-        
+                  
         }
     }
 //return me arry milta hai use print karna hota hai
