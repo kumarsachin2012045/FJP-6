@@ -15,8 +15,18 @@ function cb(error, response, html) {
         const document = dom.window.document;
         // let temp= document.querySelectorAll(".ds-text-tight-m.ds-font-regular.ds-truncate.ds-text-typo-title");
         //let temp= document.querySelectorAll(".ds-text-tight-m.ds-font-regular.ds-text-ui-typo-mid");
-        let temp= document.querySelectorAll(".ds-text-tight-s.ds-font-bold.ds-uppercase");
-           for(let i=0;i<temp.length;i++)
-           console.log(temp[i].textContent);
+        //let temp= document.querySelectorAll(".ds-text-tight-s.ds-font-bold.ds-uppercase");
+        //let temp= document.querySelectorAll(".ci-team-score.ds-flex.ds-justify-between.ds-items-center.ds-text-typo-title.ds-mb-2");
+        let temp= document.querySelectorAll(".ds-w-full.ds-table.ds-table-md.ds-table-auto.ci-scorecard-table");
+        //for(let i=0;i<temp.length;i++)
+        //    console.log(temp[0].textContent);
+        //    console.log(temp[1].textContent);
+       console.log("............................................................................................")
+       console.log("............................................................................................")
+        for(let i=0;i<temp.length;i++)
+          console.log(temp[i].textContent);
+          
+        
         }
     }
+//return me arry milta hai use print karna hota hai
