@@ -12,11 +12,13 @@ function cb(error, response, html) {
     else{
         const dom = new JSDOM(html);
         const document = dom.window.document;
-        let Btable=document.querySelectorAll(".ds-w-full.ds-table.ds-table-md.ds-table-auto.ci-scorecard-table tbody tr td a");
-        for(let i=0;i<Btable.length;i++){
-            console.log(Btable[i].textContent);
-            
-           
+        let Batsman=document.querySelectorAll(".ds-w-full.ds-table.ds-table-md.ds-table-auto.ci-scorecard-table tbody tr td a");
+        for(let i=0;i<Batsman.length;i++){//link find karne ke liye .href karna h
+            //console.log(Batsman[i].textContent);
+            let batmanLink=Batsman[i].href;
+            //console.log(batmanLink);//yaha se half link milega jo href me hai baki half link next page ke url me hai use add kardo to next page ki complete link milega 
+           let comleteBatsmanLink="https://www.espncricinfo.com"+batmanLink;
+           console.log(comleteBatsmanLink);
         }
        }
 }
