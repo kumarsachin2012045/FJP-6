@@ -34,7 +34,7 @@ function cb2(error,response,html){
         
             let Name=player[0].textContent;
             let DOB=player[1].textContent;
-            console.log("Name of plyer "+Name+"Date of birth "+DOB);
+            console.log("Name of plyer"+Name+"   Date of birth "+DOB);
             
     }
 }
