@@ -81,6 +81,7 @@ function processPlayer(name,runs,balls,fours,sixes){
 //aur neeche console karne ke liye kuchh hai nahi to console nhi karega kuchh bhi
 //ab cb2 ke neeche likh ke dekhte hai
 //q1 kya leaderbord empty print hoga ?----no
-//q2 leadrbord kitni bar print hoga ?-----jitna team hoga 
+//q2 leadrbord kitni bar print hoga ?-----ek se jyada bar array of object print hoga
 //kya update hoke har bar print hoga ya same hoga  ---update
 //ek se jyada lederbord ya Array print hoga but hme to ek leaderbord/array print karna tha
+//Array hmari object ki bni h
