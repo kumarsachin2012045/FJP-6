@@ -1,6 +1,6 @@
 const fs=require('fs');
 console.log("Before reading the data");
-let content =fs.readFileSync("file.txt");
+let content =fs.readFileSync("file.txt");//ye Asynchronous function hai
 console.log(content+"");
 console.log("After reading the data");
 // ye kam sychronously ho raha hai line by line
@@ -26,3 +26,6 @@ console.log("After reading the data");
 // }
 // console.log("After reading the data");
 
+
+//Asynchronous function ye node api par chla jata hai jab tak call stack me jo hai wo run nhi hota
+//teen container hote hai 1.call stack(jo main thread par par hota hai)2. task queue(calling function like cb) 3. Node API(ISME Asynchrous function rakhe jate hai) 

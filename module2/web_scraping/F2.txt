@@ -1,0 +1,1 @@
+jo pahle read hoga wo pahle jayeg call stack me waiting queue se
