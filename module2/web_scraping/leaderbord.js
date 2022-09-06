@@ -18,6 +18,7 @@ function cb(error,response,html){
         //console.log(completeLink); ab iss link par request lgate hai iss link par  htnl page lane ke liye
         request(completeLink,cb2);
         }
+        //console.log(leaderbord);//output empty
     }
 }
 function cb2(error,response,html){
@@ -71,7 +72,9 @@ function processPlayer(name,runs,balls,fours,sixes){
         Sixes:sixes
      };
      leaderbord.push(obj);
- }//leader bord to ban gya hai
+ }//leaderbord to ban gya hai
 //console.log(leaderbord);//iska output empty[] kyo ki callback(cb)abhi chla hi nhi ye abhi node API par rkha hai
 //jab Asynchronous function apna kam kar lega tab callback function ko waiting/task queue me bhejega ye tab tak waiting karega jab tak callstack empty nhi hoga
 //aur tab ye call stack me jake execute hoga iska matlab leaderbord ko yaha nhi print kra sakte;
+//leaderbord ko cb ke andar likha tab kya print hoga output empty[] kyoki cb execute hote time ye cb2 par request kar dega jis se ye jitna team hoga sare request ye asynchronous hai isliye sare node API par chale jayenge aur sare function waiting me wait karenge call stack empty hone ka
+//aur neeche console karne ke liye kuchh hai nahi to console nhi karega kuchh bhi
