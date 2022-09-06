@@ -40,12 +40,12 @@ function cb2(error,response,html){
         }
     }
 }
-processPlayer('Muneeba Ali','10','13','2','0')//string kyo pass kiya .textContent likhte hai to string milta hai
-processPlayer('Muneeba Ali','25','26','3','0')
+processPlayer('Muneeba Ali','10','13','2','0')//string kyo pass kiya .textContent likhte hai to string milta hai isse add karne par concatenate ho jata hai
+processPlayer('Muneeba Ali','25','26','3','0')//Number ki helps sabko integer me change kar diya
 console.log(leaderbord);
 function processPlayer(name,runs,balls,fours,sixes){
     runs=Number(runs);
-    balls=Number(balls);
+    balls=Number(balls);//conversion from string to integer
     fours=Number(fours);
     sixes=Number(sixes);
     for(let i=0;i<leaderbord.length;i++){
@@ -71,9 +71,3 @@ function processPlayer(name,runs,balls,fours,sixes){
      };
      leaderbord.push(obj);
  }
- 
- //itna karne ke bad iss function ko cb2 me processPlayer() likho aur name run ball sixex fours pass karo processPlayer(name run ball sixex fours)
- //ye har player par karna hai isliye issliye cb2 me likha
-
- //dusra task hai leaderbord ko kaha likhe ki sare player ka record dikhe 
- 
