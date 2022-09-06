@@ -40,6 +40,7 @@ function cb2(error,response,html){
                 processPlayer(name,runs,balls,fours,sixes)
             }
         }
+        //console.log(leaderbord);//jitna team tha utna bar print hoga ye shi jagah nhi h
     }
 }
 // processPlayer('Muneeba Ali','10','13','2','0')//string kyo pass kiya .textContent likhte hai to string milta hai isse add karne par concatenate ho jata hai
@@ -78,3 +79,8 @@ function processPlayer(name,runs,balls,fours,sixes){
 //aur tab ye call stack me jake execute hoga iska matlab leaderbord ko yaha nhi print kra sakte;
 //leaderbord ko cb ke andar likha tab kya print hoga output empty[] kyoki cb execute hote time ye cb2 par request kar dega jis se ye jitna team hoga sare request ye asynchronous hai isliye sare node API par chale jayenge aur sare function waiting me wait karenge call stack empty hone ka
 //aur neeche console karne ke liye kuchh hai nahi to console nhi karega kuchh bhi
+//ab cb2 ke neeche likh ke dekhte hai
+//q1 kya leaderbord empty print hoga ?----no
+//q2 leadrbord kitni bar print hoga ?-----jitna team hoga 
+//kya update hoke har bar print hoga ya same hoga  ---update
+//harbar jitni team hoga utna lederbord print hoha but hme to leader bord print karna hai
