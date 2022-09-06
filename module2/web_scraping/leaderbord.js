@@ -70,5 +70,10 @@ function processPlayer(name,runs,balls,fours,sixes){
         Sixes:sixes
      };
      leaderbord.push(obj);
+ }
  
-}
+ //itna karne ke bad iss function ko cb2 me processPlayer() likho aur name run ball sixex fours pass karo processPlayer(name run ball sixex fours)
+ //ye har player par karna hai isliye issliye cb2 me likha
+
+ //dusra task hai leaderbord ko kaha likhe ki sare player ka record dikhe 
+ 
