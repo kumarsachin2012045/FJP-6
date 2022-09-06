@@ -83,4 +83,4 @@ function processPlayer(name,runs,balls,fours,sixes){
 //q1 kya leaderbord empty print hoga ?----no
 //q2 leadrbord kitni bar print hoga ?-----jitna team hoga 
 //kya update hoke har bar print hoga ya same hoga  ---update
-//harbar jitni team hoga utna lederbord print hoha but hme to leader bord print karna hai
+//ek se jyada lederbord ya Array print hoga but hme to ek leaderbord/array print karna tha
