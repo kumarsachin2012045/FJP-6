@@ -28,7 +28,7 @@ function cb2(error,response,html){
         let batsmanRow=document.querySelectorAll(".scorecard-section.batsmen .flex-row .wrap.batsmen");
         for(let j=0;j<batsmanRow.length;j++){
             let cell=batsmanRow[j].querySelectorAll(".cell");
-            if(cell.length==8){
+            if(cell.length==8){//jo kam ki td usme 8 cell/td hai har row me 
                 let name=cell[0].textContent;
                 let runs=cell[2].textContent;
                 let balls=cell[3].textContent;
@@ -38,4 +38,29 @@ function cb2(error,response,html){
             }
         }
     }
+}
+processPlayer('Muneeba Ali','10','13','2','0')//string kyo pass kiya .textContent likhte hai to string milta hai
+console.log(leaderbord);//leaderbord ko kaha likhe ki ye ReferenceError: leaderbord is not defined na aye 
+function processPlayer(name,runs,balls,fours,sixes){
+    for(let i=0;i<leaderbord.js;i++){
+           let playerObj=leaderbord[i];
+           if(playerObj.Name==name){
+            //do some work
+            playerObj.Runs+=runs,
+            playerObj.Balls+=balls,
+            playerObj.Fours+=fours,
+            playerObj.Sixes+=sixes
+            return;
+           }
+     }
+     //code comming here if not find player in leaderbord
+     let obj={
+        Nmae:name,
+        Runs:runs,
+        Balls:balls,
+        Fours:fours,
+        Sixes:sixes
+     };
+     leaderbord.push(obj);
+ 
 }
