@@ -95,5 +95,5 @@ function processPlayer(name,runs,balls,fours,sixes){
 //Array hamari object ki bni hai har array me ek se jayada object honge
 
 //ye pta karne ke liye ki final leaderbord kab print hoga iske liye pahle counter lgaya aur request ko count kiya jo node API par h
-//uske bad jo count mila use decrease kiya tab tak jab tk sare request apna kam nhi kar lete hai that means count 0 hote hi sare request complete ho jayenge
-// aur final leadrbord mil jayega aur ye ek hi arry me hoga sara object
+//uske bad jo count mila jaise -2 request compplete ho rhi hai count ko decrease kar rahe hai tab tak jab tk sare request apna kam nhi kar lete hai (that means sare function one by one waiting queue se call stack me jake execute nhi hote tab tak count decrease karenge) and count 0 hote hi sare request complete ho jayenge
+// aur final leadrbord mil jayega aur ye ek hi arry me hoga sara object honge
