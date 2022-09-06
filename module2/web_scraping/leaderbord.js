@@ -73,5 +73,5 @@ function processPlayer(name,runs,balls,fours,sixes){
      leaderbord.push(obj);
  }//leader bord to ban gya hai
 //console.log(leaderbord);//iska output empty[] kyo ki callback(cb)abhi chla hi nhi ye abhi node API par rkha hai
-//jab Asynchronous function apna kam kar lega tab callback function ko waiting/task queue me bhejega
+//jab Asynchronous function apna kam kar lega tab callback function ko waiting/task queue me bhejega ye tab tak waiting karega jab tak callstack empty nhi hoga
 //aur tab ye call stack me jake execute hoga iska matlab leaderbord ko yaha nhi print kra sakte;
