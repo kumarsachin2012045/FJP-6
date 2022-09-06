@@ -40,7 +40,7 @@ function cb2(error,response,html){
                 processPlayer(name,runs,balls,fours,sixes)
             }
         }
-        //console.log(leaderbord);//jitna team tha utna bar print hoga ye shi jagah nhi h
+        //console.log(leaderbord);//jitna bar cb2 chla utna bar leaderbord/array print hoga ye shi jagah nhi h
     }
 }
 // processPlayer('Muneeba Ali','10','13','2','0')//string kyo pass kiya .textContent likhte hai to string milta hai isse add karne par concatenate ho jata hai
@@ -81,7 +81,7 @@ function processPlayer(name,runs,balls,fours,sixes){
 //aur neeche console karne ke liye kuchh hai nahi to console nhi karega kuchh bhi
 //ab cb2 ke neeche likh ke dekhte hai
 //q1 kya leaderbord empty print hoga ?----no
-//q2 leadrbord kitni bar print hoga ?-----ek se jyada bar array of object print hoga
-//kya update hoke har bar print hoga ya same hoga  ---update
+//q2 leadrbord kitni bar print hoga ?-----iske liye counter lga dekh lo aur ek se jyada bar array of object print hoga aur har array me jitni bar cb2 call hua hoga utni bar object print hua hoga
+//kya update hoke har bar print hoga ya same hoga  ---update aur ek bar esa zaroor hoga jab jab final leaderbord print hua hoga
 //ek se jyada lederbord ya Array print hoga but hme to ek leaderbord/array print karna tha
-//Array hmari object ki bni h
+//Array hamari object ki bni hai har array me ek se jayada object honge
