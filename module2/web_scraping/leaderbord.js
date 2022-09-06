@@ -2,6 +2,7 @@ const request = require('request');
 const jsdom = require("jsdom");
 const { JSDOM } = jsdom;
 const link="https://www.espn.com/cricket/scores/series/8634/womens-t20-world-cup"//https://www.espn.com ye domain name hai href me add ho ke complete link banega new page ka
+let leaderbord=[];
 request(link,cb);
 function cb(error,response,html){
     if(error)
@@ -34,19 +35,25 @@ function cb2(error,response,html){
                 let balls=cell[3].textContent;
                 let fours=cell[4].textContent;
                 let sixs=cell[5].textContent;
-                console.log("Nmae : ",name," Runs : ",runs," Balls : ",balls," Four : ",fours," Sixes : ",sixs);
+                //console.log("Nmae : ",name," Runs : ",runs," Balls : ",balls," Four : ",fours," Sixes : ",sixs);
             }
         }
     }
 }
 processPlayer('Muneeba Ali','10','13','2','0')//string kyo pass kiya .textContent likhte hai to string milta hai
-console.log(leaderbord);//leaderbord ko kaha likhe ki ye ReferenceError: leaderbord is not defined na aye 
+processPlayer('Muneeba Ali','25','26','3','0')
+console.log(leaderbord);
 function processPlayer(name,runs,balls,fours,sixes){
-    for(let i=0;i<leaderbord.js;i++){
+    runs=Number(runs);
+    balls=Number(balls);
+    fours=Number(fours);
+    sixes=Number(sixes);
+    for(let i=0;i<leaderbord.length;i++){
            let playerObj=leaderbord[i];
            if(playerObj.Name==name){
             //do some work
             playerObj.Runs+=runs,
+            playerObj.Innings+=1,
             playerObj.Balls+=balls,
             playerObj.Fours+=fours,
             playerObj.Sixes+=sixes
@@ -55,7 +62,8 @@ function processPlayer(name,runs,balls,fours,sixes){
      }
      //code comming here if not find player in leaderbord
      let obj={
-        Nmae:name,
+        Name:name,
+        Innings:1,
         Runs:runs,
         Balls:balls,
         Fours:fours,
