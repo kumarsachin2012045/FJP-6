@@ -3,6 +3,7 @@ const jsdom = require("jsdom");
 const { JSDOM } = jsdom;
 const link="https://www.espn.com/cricket/scores/series/8634/womens-t20-world-cup"//https://www.espn.com ye domain name hai href me add ho ke complete link banega new page ka
 let leaderbord=[];
+let counter=0;
 request(link,cb);//ye Asynchronous function hai
 function cb(error,response,html){
     if(error)
@@ -17,6 +18,7 @@ function cb(error,response,html){
         let completeLink="https://www.espn.com"+link;
         //console.log(completeLink); ab iss link par request lgate hai iss link par  htnl page lane ke liye
         request(completeLink,cb2);
+        counter++;
         }
         //console.log(leaderbord);//output empty
     }
@@ -41,6 +43,12 @@ function cb2(error,response,html){
             }
         }
         //console.log(leaderbord);//jitna bar cb2 chla utna bar leaderbord/array print hoga ye shi jagah nhi h
+
+        counter--;
+        if(counter==0)
+        {
+            console.log(leaderbord);
+        }
     }
 }
 // processPlayer('Muneeba Ali','10','13','2','0')//string kyo pass kiya .textContent likhte hai to string milta hai isse add karne par concatenate ho jata hai
@@ -85,3 +93,7 @@ function processPlayer(name,runs,balls,fours,sixes){
 //kya update hoke har bar print hoga ya same hoga  ---update aur ek bar esa zaroor hoga jab jab final leaderbord print hua hoga
 //ek se jyada lederbord ya Array print hoga but hme to ek leaderbord/array print karna tha
 //Array hamari object ki bni hai har array me ek se jayada object honge
+
+//ye pta karne ke liye ki final leaderbord kab print hoga iske liye pahle counter lgaya aur request ko count kiya jo node API par h
+//uske bad jo count mila use decrease kiya tab tak jab tk sare request apna kam nhi kar lete hai that means count 0 hote hi sare request complete ho jayenge
+// aur final leadrbord mil jayega aur ye ek hi arry me hoga sara object
