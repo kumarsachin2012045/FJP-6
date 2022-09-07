@@ -114,3 +114,4 @@ function processPlayer(name,runs,balls,fours,sixes){
 //ye tha node API ka concept
 //ab ek kam aur h ise xL me covert karna hai aap google out kar sakte ho ki json string ko kaise xL kaise bnate hai ya array of object ko kaise xL me kaise bnate hai
 //jo data aya hai pahle use print karaya to pura nhi dikha to json file bna li(isme dikhi) ab ise xL bnana hai
+//xL format sabse jayda readable hai
