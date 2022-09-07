@@ -1,6 +1,7 @@
 const request = require('request');
 const jsdom = require("jsdom");
 const { JSDOM } = jsdom;
+const fs=require('fs');
 const link="https://www.espn.com/cricket/scores/series/8634/womens-t20-world-cup"//https://www.espn.com ye domain name hai href me add ho ke complete link banega new page ka
 let leaderbord=[];
 let counter=0;
@@ -47,7 +48,12 @@ function cb2(error,response,html){
         counter--;
         if(counter==0)
         {
-            console.log(leaderbord);
+            console.log(leaderbord);//yaha par hamara leaderbord poora taiyar hai jsn file ke liye code yhi likhenge
+            //fs.writeFileSync('BatsmanStats.json',leaderbord)//ise do parameter chahiye 1. path(kaha lihna chahte ho) 2.uske andar kya likhna chahte ho wo string me dena   
+            //ye error dega kyo ki leader bord ek array hai string nhi hai 
+            //isproblem ko solve karne ke liye JSON.stringify() hai
+            let data=JSON.stringify(leaderbord)//leaderbord ko string me convert kar diya
+            fs.writeFileSync('BatsmanStats.json',data);//jab iss file par jaoge to sahi format me na dikhe to right click karke format par click kar dena 
         }
     }
 }
@@ -98,4 +104,5 @@ function processPlayer(name,runs,balls,fours,sixes){
 //uske bad jo count mila jaise -2 request compplete ho rhi hai count ko decrease kar rahe hai tab tak jab tk sare request apna kam nhi kar lete hai (that means sare function one by one waiting queue se call stack me jake execute nhi hote tab tak count decrease karenge) and count 0 hote hi sare request complete ho jayenge
 // aur final leadrbord mil jayega aur ye ek hi arry me hoga sara object honge
 //hamre pass sare object aa gye but dikha nhi raha hai ...18 more items karke chhode de raha hai sabhi player object nhi dikha raha
-//hme agar dekhna hai na to ham ek jsn file bnate hai aur usme sare data/items/object ko dekhenge
+//hme agar dekhna hai na to ham ek jsn file bnate hai aur usme sare data/items/object ko dekh askte hai 
+//iske liye fs require karna padega
