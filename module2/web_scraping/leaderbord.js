@@ -52,7 +52,7 @@ function cb2(error,response,html){
             //fs.writeFileSync('BatsmanStats.json',leaderbord)//ise do parameter chahiye 1. path(kaha lihna chahte ho) 2.uske andar kya likhna chahte ho wo string me dena   
             //ye error dega kyo ki leader bord ek array hai string nhi hai 
             //isproblem ko solve karne ke liye JSON.stringify() hai
-            let data=JSON.stringify(leaderbord)//leaderbord ko string me convert kar diya
+            let data=JSON.stringify(leaderbord)//leaderbord ko string me convert kar diya aur ese karti h ki bad me app wapas se json me covert kar lo parse lga ke
             fs.writeFileSync('BatsmanStats.json',data);//jab iss file par jaoge to sahi format me na dikhe to right click karke format par click kar dena 
         }
     }
@@ -105,4 +105,12 @@ function processPlayer(name,runs,balls,fours,sixes){
 // aur final leadrbord mil jayega aur ye ek hi arry me hoga sara object honge
 //hamre pass sare object aa gye but dikha nhi raha hai ...18 more items karke chhode de raha hai sabhi player object nhi dikha raha
 //hme agar dekhna hai na to ham ek jsn file bnate hai aur usme sare data/items/object ko dekh askte hai 
-//iske liye fs require karna padega
+//iske liye fs require karna padega fs fir fs.writeFileSync('path',string)ki helps content ko path par jake file bna ke content likh dega
+//aur sara data dikhega jab us path par jaoge agar format shi na ho to right click kare format document par click kar dena dikh jayega 
+
+//JSON KE BARE ME(json format devloper ko pta hota hai normal log pdf format  jante hai)
+//json means java script object notaion ye data response bhejne me kam ati hai aur data ko manuclutaion karne ke kam ati hai 
+// jaise API likhte hai bacakent pe to wha se data pass karna hota to json form me karte h
+//ye tha node API ka concept
+//ab ek kam aur h ise xL me covert karna hai aap google out kar sakte ho ki json string ko kaise xL kaise bnate hai ya array of object ko kaise xL me kaise bnate hai
+//jo data aya hai pahle use print karaya to pura nhi dikha to json file bna li(isme dikhi) ab ise xL bnana hai
