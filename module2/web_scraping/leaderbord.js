@@ -112,6 +112,8 @@ function processPlayer(name,runs,balls,fours,sixes){
 //json means java script object notaion ye data response bhejne me kam ati hai aur data ko manuclutaion karne ke kam ati hai 
 // jaise API likhte hai bacakent pe to wha se data pass karna hota to json form me karte h
 //ye tha node API ka concept
-//ab ek kam aur h ise xL me covert karna hai aap google out kar sakte ho ki json string ko kaise xL kaise bnate hai ya array of object ko kaise xL me kaise bnate hai
-//jo data aya hai pahle use print karaya to pura nhi dikha to json file bna li(isme dikhi) ab ise xL bnana hai
-//xL format sabse jayda readable hai
+//ab ek kam aur h ise xLsx me covert karna hai aap google out kar sakte ho ki json string ko kaise xLsx kaise bnate hai ya array of object ko kaise xLsx me kaise bnate hai
+//jo data aya hai pahle use print karaya to pura nhi dikha to json file bna li(isme dikhi) ab ise xLsx bnana hai
+//xLsx format sabse jayda readable hai 
+//xlsx me convert karne ke liye ek tool hai json-as-xlsx agr ye tool use karna hai to npn i json-as-xlsx ese likh ke terminal me install karna padega aur ise kaise use karna hai iske page par likha hoga uses me ye ham same kar rahe hai jaise jsdom,request bahar se use kiya tha aur dekhe the kaise use karna hai uske page par jakar(that means iska syntax)
+//iske syntax (uses me) me jo tha use json_as_xlsx ke file me paste kiya aur usko obseve kiya
