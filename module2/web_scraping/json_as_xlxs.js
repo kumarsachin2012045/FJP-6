@@ -46,4 +46,6 @@ xlsx(data, settings) // Will download the excel file
 //column me jo level hai wo heading ki tarah kam karta hai//dusra content ye btata hai ki ukse neeche data kya leke jaoge
 //column me jo value hai wo key hai jo content me milegi 
 //content ka pahla object pahle column ke neeche show karega similarly dusra object dusre column ke neeche 
+//setting me bass file ka name aur column ki size 
+//xlsx(data,setting )ye excel file karke deta h 
 //hamare leader bord wale me content leaderbord hai aur hme ek hi sheet chahiye to data me ek hi object rakhenge
