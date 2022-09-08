@@ -53,21 +53,24 @@ function cb2(error, response, html) {
             //isproblem ko solve karne ke liye JSON.stringify() hai
             let data = JSON.stringify(leaderbord)//leaderbord ko string me convert kar diya aur ese karti h ki bad me app wapas se json me covert kar lo parse lga ke
             fs.writeFileSync('BatsmanStats.json', data);//jab iss file par jaoge to sahi format me na dikhe to right click karke format par click kar dena 
+           
+           //Excel sheet coversion process
             let xlsx = require("json-as-xlsx")//yha iska module require kiya jaise pahle karte the that means iss module ko use karenge
 
             let dataExcel = [//jaise json array of object hai oaise data bhi array of object hai isme 2 object hai to 2 sheet bnegi
                 {
-                    sheet: "Adults",
+                    sheet: "IPL player Details",
                     columns: [//value me btayenge ki kis key correspond value uthhani h
-                        { label: "Name", value: "Name" },
-                        { label: "Innings", value: " Innings" },
-                        { label: "Runs", value: "Runs" },
-                        { label: "Balls", value: "Balls" },
-                        { label: "Fours", value: "Fours" }, 
-                        { label: "Sixes", value: "Sixes" }, 
+                        { label: "Name", value:"Name" },
+                        { label: "Innings", value:"Innings" },
+                        { label: "Runs", value:"Runs" },
+                        { label: "Balls", value:"Balls" },
+                        { label: "Fours", value:"Fours" }, 
+                        { label: "Sixes", value:"Sixes" }, 
                              
                     ],
                     content: leaderbord 
+                    //[{Name:"Name"}
                 },
 
             ]
@@ -80,6 +83,7 @@ function cb2(error, response, html) {
 
             xlsx(dataExcel, settings) // Will download the excel file
             //run karne par ek excel sheet bnegi jo file name diye ho
+            //explanation json_as_xlsx me hai read kar lo
         }
     }
 }
@@ -143,3 +147,6 @@ function processPlayer(name, runs, balls, fours, sixes) {
 //xLsx format sabse jayda readable hai
 //xlsx me convert karne ke liye ek tool hai json-as-xlsx agr ye tool use karna hai to npn i json-as-xlsx ese likh ke terminal me install karna padega aur ise kaise use karna hai iske page par likha hoga uses me ye ham same kar rahe hai jaise jsdom,request bahar se use kiya tha aur dekhe the kaise use karna hai uske page par jakar(that means iska syntax)
 //iske syntax (uses me) me jo tha use json_as_xlsx(iss file ko bnaya hai) ke file me paste kiya aur usko obseve kiya
+//baki cheeje json_as_xlsx me explain kiya hai
+//ab ham kisi bhi saide ka data nikal sakte ho
+//HW github scraper

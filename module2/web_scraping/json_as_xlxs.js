@@ -49,3 +49,7 @@ xlsx(data, settings) // Will download the excel file
 //setting me bass file ka name aur column ki size 
 //xlsx(data,setting )ye excel file karke deta h 
 //hamare leader bord wale me content leaderbord hai aur hme ek hi sheet chahiye to data me ek hi object rakhenge
+//aur leaderbord me sare object ese [{Name:"preeti",Innings:"45",Runs:"343",Balls:"232",Fours:"43",Sixes:"21"}
+//                                  {Name:"Anju",Innings:"45",Runs:"343",Balls:"232",Fours:"43",Sixes:"21"}..]
+//jo value me Name naam ki key hai uske coressponding object(ye object content me hai) me jitne different naam hai sare use kar lo Name column me
+//jo value me Innings naam ki key hai uske coressponding object me jitne different Innings hai sare use kar lo Innings wale column me
